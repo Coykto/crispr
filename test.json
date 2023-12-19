@@ -1,0 +1,477 @@
+{
+    "name": "humal",
+    "description": "humal Description of a human DNA sequence",
+    "sequence": "CTTCCTTTGTCCCCAATCTGGGCGCGCGCCGGCGCCCCCTGGCGGCCTAAGGACTCGGCGCGCCGGAAGTGGCCAGGGCGGGGGCGACCTCGGCTCACAGCGCGCCCGGCTATTCTCGCAGCTCACCATGGATGATGATATCGCCGCGCTCGTCGTCGACAACGGCTCCGGCATGTGCAAGGCCGGCTTCGCGGGCGACGATGCCCCCCGGGCCGTCTTCCCCTCCATCGTGGGGCGCC",
+    "pam": "NGG",
+    "targetLength": 20,
+    "targets": [
+        {
+            "position": 30,
+            "strand": "fwd",
+            "sequence": "TCCCCAATCTGGGCGCGCGC",
+            "targetSequence": "TCCCCAATCTGGGCGCGCGC",
+            "pam": "CGG",
+            "targetPam": "CGG",
+            "targetLength": 20
+        },
+        {
+            "position": 40,
+            "strand": "fwd",
+            "sequence": "GGGCGCGCGCCGGCGCCCCC",
+            "targetSequence": "GGGCGCGCGCCGGCGCCCCC",
+            "pam": "TGG",
+            "targetPam": "TGG",
+            "targetLength": 20
+        },
+        {
+            "position": 43,
+            "strand": "fwd",
+            "sequence": "CGCGCGCCGGCGCCCCCTGG",
+            "targetSequence": "CGCGCGCCGGCGCCCCCTGG",
+            "pam": "CGG",
+            "targetPam": "CGG",
+            "targetLength": 20
+        },
+        {
+            "position": 50,
+            "strand": "fwd",
+            "sequence": "CGGCGCCCCCTGGCGGCCTA",
+            "targetSequence": "CGGCGCCCCCTGGCGGCCTA",
+            "pam": "AGG",
+            "targetPam": "AGG",
+            "targetLength": 20
+        },
+        {
+            "position": 56,
+            "strand": "fwd",
+            "sequence": "CCCCTGGCGGCCTAAGGACT",
+            "targetSequence": "CCCCTGGCGGCCTAAGGACT",
+            "pam": "CGG",
+            "targetPam": "CGG",
+            "targetLength": 20
+        },
+        {
+            "position": 64,
+            "strand": "fwd",
+            "sequence": "GGCCTAAGGACTCGGCGCGC",
+            "targetSequence": "GGCCTAAGGACTCGGCGCGC",
+            "pam": "CGG",
+            "targetPam": "CGG",
+            "targetLength": 20
+        },
+        {
+            "position": 70,
+            "strand": "fwd",
+            "sequence": "AGGACTCGGCGCGCCGGAAG",
+            "targetSequence": "AGGACTCGGCGCGCCGGAAG",
+            "pam": "TGG",
+            "targetPam": "TGG",
+            "targetLength": 20
+        },
+        {
+            "position": 75,
+            "strand": "fwd",
+            "sequence": "TCGGCGCGCCGGAAGTGGCC",
+            "targetSequence": "TCGGCGCGCCGGAAGTGGCC",
+            "pam": "AGG",
+            "targetPam": "AGG",
+            "targetLength": 20
+        },
+        {
+            "position": 76,
+            "strand": "fwd",
+            "sequence": "CGGCGCGCCGGAAGTGGCCA",
+            "targetSequence": "CGGCGCGCCGGAAGTGGCCA",
+            "pam": "GGG",
+            "targetPam": "GGG",
+            "targetLength": 20
+        },
+        {
+            "position": 79,
+            "strand": "fwd",
+            "sequence": "CGCGCCGGAAGTGGCCAGGG",
+            "targetSequence": "CGCGCCGGAAGTGGCCAGGG",
+            "pam": "CGG",
+            "targetPam": "CGG",
+            "targetLength": 20
+        },
+        {
+            "position": 80,
+            "strand": "fwd",
+            "sequence": "GCGCCGGAAGTGGCCAGGGC",
+            "targetSequence": "GCGCCGGAAGTGGCCAGGGC",
+            "pam": "GGG",
+            "targetPam": "GGG",
+            "targetLength": 20
+        },
+        {
+            "position": 81,
+            "strand": "fwd",
+            "sequence": "CGCCGGAAGTGGCCAGGGCG",
+            "targetSequence": "CGCCGGAAGTGGCCAGGGCG",
+            "pam": "GGG",
+            "targetPam": "GGG",
+            "targetLength": 20
+        },
+        {
+            "position": 82,
+            "strand": "fwd",
+            "sequence": "GCCGGAAGTGGCCAGGGCGG",
+            "targetSequence": "GCCGGAAGTGGCCAGGGCGG",
+            "pam": "GGG",
+            "targetPam": "GGG",
+            "targetLength": 20
+        },
+        {
+            "position": 91,
+            "strand": "fwd",
+            "sequence": "GGCCAGGGCGGGGGCGACCT",
+            "targetSequence": "GGCCAGGGCGGGGGCGACCT",
+            "pam": "CGG",
+            "targetPam": "CGG",
+            "targetLength": 20
+        },
+        {
+            "position": 107,
+            "strand": "fwd",
+            "sequence": "ACCTCGGCTCACAGCGCGCC",
+            "targetSequence": "ACCTCGGCTCACAGCGCGCC",
+            "pam": "CGG",
+            "targetPam": "CGG",
+            "targetLength": 20
+        },
+        {
+            "position": 129,
+            "strand": "fwd",
+            "sequence": "GCTATTCTCGCAGCTCACCA",
+            "targetSequence": "GCTATTCTCGCAGCTCACCA",
+            "pam": "TGG",
+            "targetPam": "TGG",
+            "targetLength": 20
+        },
+        {
+            "position": 163,
+            "strand": "fwd",
+            "sequence": "GCCGCGCTCGTCGTCGACAA",
+            "targetSequence": "GCCGCGCTCGTCGTCGACAA",
+            "pam": "CGG",
+            "targetPam": "CGG",
+            "targetLength": 20
+        },
+        {
+            "position": 169,
+            "strand": "fwd",
+            "sequence": "CTCGTCGTCGACAACGGCTC",
+            "targetSequence": "CTCGTCGTCGACAACGGCTC",
+            "pam": "CGG",
+            "targetPam": "CGG",
+            "targetLength": 20
+        },
+        {
+            "position": 180,
+            "strand": "fwd",
+            "sequence": "CAACGGCTCCGGCATGTGCA",
+            "targetSequence": "CAACGGCTCCGGCATGTGCA",
+            "pam": "AGG",
+            "targetPam": "AGG",
+            "targetLength": 20
+        },
+        {
+            "position": 184,
+            "strand": "fwd",
+            "sequence": "GGCTCCGGCATGTGCAAGGC",
+            "targetSequence": "GGCTCCGGCATGTGCAAGGC",
+            "pam": "CGG",
+            "targetPam": "CGG",
+            "targetLength": 20
+        },
+        {
+            "position": 192,
+            "strand": "fwd",
+            "sequence": "CATGTGCAAGGCCGGCTTCG",
+            "targetSequence": "CATGTGCAAGGCCGGCTTCG",
+            "pam": "CGG",
+            "targetPam": "CGG",
+            "targetLength": 20
+        },
+        {
+            "position": 193,
+            "strand": "fwd",
+            "sequence": "ATGTGCAAGGCCGGCTTCGC",
+            "targetSequence": "ATGTGCAAGGCCGGCTTCGC",
+            "pam": "GGG",
+            "targetPam": "GGG",
+            "targetLength": 20
+        },
+        {
+            "position": 209,
+            "strand": "fwd",
+            "sequence": "TCGCGGGCGACGATGCCCCC",
+            "targetSequence": "TCGCGGGCGACGATGCCCCC",
+            "pam": "CGG",
+            "targetPam": "CGG",
+            "targetLength": 20
+        },
+        {
+            "position": 210,
+            "strand": "fwd",
+            "sequence": "CGCGGGCGACGATGCCCCCC",
+            "targetSequence": "CGCGGGCGACGATGCCCCCC",
+            "pam": "GGG",
+            "targetPam": "GGG",
+            "targetLength": 20
+        },
+        {
+            "position": 231,
+            "strand": "fwd",
+            "sequence": "GGCCGTCTTCCCCTCCATCG",
+            "targetSequence": "GGCCGTCTTCCCCTCCATCG",
+            "pam": "TGG",
+            "targetPam": "TGG",
+            "targetLength": 20
+        },
+        {
+            "position": 232,
+            "strand": "fwd",
+            "sequence": "GCCGTCTTCCCCTCCATCGT",
+            "targetSequence": "GCCGTCTTCCCCTCCATCGT",
+            "pam": "GGG",
+            "targetPam": "GGG",
+            "targetLength": 20
+        },
+        {
+            "position": 233,
+            "strand": "fwd",
+            "sequence": "CCGTCTTCCCCTCCATCGTG",
+            "targetSequence": "CCGTCTTCCCCTCCATCGTG",
+            "pam": "GGG",
+            "targetPam": "GGG",
+            "targetLength": 20
+        },
+        {
+            "position": 4,
+            "strand": "rev",
+            "sequence": "CGCGCCCAGATTGGGGACAA",
+            "targetSequence": "TTGTCCCCAATCTGGGCGCG",
+            "pam": "AGG",
+            "targetPam": "CCT",
+            "targetLength": 20
+        },
+        {
+            "position": 11,
+            "strand": "rev",
+            "sequence": "GCCGGCGCGCGCCCAGATTG",
+            "targetSequence": "CAATCTGGGCGCGCGCCGGC",
+            "pam": "GGG",
+            "targetPam": "CCC",
+            "targetLength": 20
+        },
+        {
+            "position": 12,
+            "strand": "rev",
+            "sequence": "CGCCGGCGCGCGCCCAGATT",
+            "targetSequence": "AATCTGGGCGCGCGCCGGCG",
+            "pam": "GGG",
+            "targetPam": "CCC",
+            "targetLength": 20
+        },
+        {
+            "position": 13,
+            "strand": "rev",
+            "sequence": "GCGCCGGCGCGCGCCCAGAT",
+            "targetSequence": "ATCTGGGCGCGCGCCGGCGC",
+            "pam": "TGG",
+            "targetPam": "CCA",
+            "targetLength": 20
+        },
+        {
+            "position": 29,
+            "strand": "rev",
+            "sequence": "CTTAGGCCGCCAGGGGGCGC",
+            "targetSequence": "GCGCCCCCTGGCGGCCTAAG",
+            "pam": "CGG",
+            "targetPam": "CCG",
+            "targetLength": 20
+        },
+        {
+            "position": 35,
+            "strand": "rev",
+            "sequence": "CGAGTCCTTAGGCCGCCAGG",
+            "targetSequence": "CCTGGCGGCCTAAGGACTCG",
+            "pam": "GGG",
+            "targetPam": "CCC",
+            "targetLength": 20
+        },
+        {
+            "position": 36,
+            "strand": "rev",
+            "sequence": "CCGAGTCCTTAGGCCGCCAG",
+            "targetSequence": "CTGGCGGCCTAAGGACTCGG",
+            "pam": "GGG",
+            "targetPam": "CCC",
+            "targetLength": 20
+        },
+        {
+            "position": 37,
+            "strand": "rev",
+            "sequence": "GCCGAGTCCTTAGGCCGCCA",
+            "targetSequence": "TGGCGGCCTAAGGACTCGGC",
+            "pam": "GGG",
+            "targetPam": "CCC",
+            "targetLength": 20
+        },
+        {
+            "position": 38,
+            "strand": "rev",
+            "sequence": "CGCCGAGTCCTTAGGCCGCC",
+            "targetSequence": "GGCGGCCTAAGGACTCGGCG",
+            "pam": "AGG",
+            "targetPam": "CCT",
+            "targetLength": 20
+        },
+        {
+            "position": 46,
+            "strand": "rev",
+            "sequence": "TTCCGGCGCGCCGAGTCCTT",
+            "targetSequence": "AAGGACTCGGCGCGCCGGAA",
+            "pam": "AGG",
+            "targetPam": "CCT",
+            "targetLength": 20
+        },
+        {
+            "position": 63,
+            "strand": "rev",
+            "sequence": "GCCCCCGCCCTGGCCACTTC",
+            "targetSequence": "GAAGTGGCCAGGGCGGGGGC",
+            "pam": "CGG",
+            "targetPam": "CCG",
+            "targetLength": 20
+        },
+        {
+            "position": 73,
+            "strand": "rev",
+            "sequence": "AGCCGAGGTCGCCCCCGCCC",
+            "targetSequence": "GGGCGGGGGCGACCTCGGCT",
+            "pam": "TGG",
+            "targetPam": "CCA",
+            "targetLength": 20
+        },
+        {
+            "position": 88,
+            "strand": "rev",
+            "sequence": "GCCGGGCGCGCTGTGAGCCG",
+            "targetSequence": "CGGCTCACAGCGCGCCCGGC",
+            "pam": "AGG",
+            "targetPam": "CCT",
+            "targetLength": 20
+        },
+        {
+            "position": 105,
+            "strand": "rev",
+            "sequence": "GGTGAGCTGCGAGAATAGCC",
+            "targetSequence": "GGCTATTCTCGCAGCTCACC",
+            "pam": "GGG",
+            "targetPam": "CCC",
+            "targetLength": 20
+        },
+        {
+            "position": 106,
+            "strand": "rev",
+            "sequence": "TGGTGAGCTGCGAGAATAGC",
+            "targetSequence": "GCTATTCTCGCAGCTCACCA",
+            "pam": "CGG",
+            "targetPam": "CCG",
+            "targetLength": 20
+        },
+        {
+            "position": 126,
+            "strand": "rev",
+            "sequence": "CGCGGCGATATCATCATCCA",
+            "targetSequence": "TGGATGATGATATCGCCGCG",
+            "pam": "TGG",
+            "targetPam": "CCA",
+            "targetLength": 20
+        },
+        {
+            "position": 144,
+            "strand": "rev",
+            "sequence": "GCCGTTGTCGACGACGAGCG",
+            "targetSequence": "CGCTCGTCGTCGACAACGGC",
+            "pam": "CGG",
+            "targetPam": "CCG",
+            "targetLength": 20
+        },
+        {
+            "position": 168,
+            "strand": "rev",
+            "sequence": "GAAGCCGGCCTTGCACATGC",
+            "targetSequence": "GCATGTGCAAGGCCGGCTTC",
+            "pam": "CGG",
+            "targetPam": "CCG",
+            "targetLength": 20
+        },
+        {
+            "position": 183,
+            "strand": "rev",
+            "sequence": "GGCATCGTCGCCCGCGAAGC",
+            "targetSequence": "GCTTCGCGGGCGACGATGCC",
+            "pam": "CGG",
+            "targetPam": "CCG",
+            "targetLength": 20
+        },
+        {
+            "position": 204,
+            "strand": "rev",
+            "sequence": "GGAGGGGAAGACGGCCCGGG",
+            "targetSequence": "CCCGGGCCGTCTTCCCCTCC",
+            "pam": "GGG",
+            "targetPam": "CCC",
+            "targetLength": 20
+        },
+        {
+            "position": 205,
+            "strand": "rev",
+            "sequence": "TGGAGGGGAAGACGGCCCGG",
+            "targetSequence": "CCGGGCCGTCTTCCCCTCCA",
+            "pam": "GGG",
+            "targetPam": "CCC",
+            "targetLength": 20
+        },
+        {
+            "position": 206,
+            "strand": "rev",
+            "sequence": "ATGGAGGGGAAGACGGCCCG",
+            "targetSequence": "CGGGCCGTCTTCCCCTCCAT",
+            "pam": "GGG",
+            "targetPam": "CCC",
+            "targetLength": 20
+        },
+        {
+            "position": 207,
+            "strand": "rev",
+            "sequence": "GATGGAGGGGAAGACGGCCC",
+            "targetSequence": "GGGCCGTCTTCCCCTCCATC",
+            "pam": "GGG",
+            "targetPam": "CCC",
+            "targetLength": 20
+        },
+        {
+            "position": 208,
+            "strand": "rev",
+            "sequence": "CGATGGAGGGGAAGACGGCC",
+            "targetSequence": "GGCCGTCTTCCCCTCCATCG",
+            "pam": "CGG",
+            "targetPam": "CCG",
+            "targetLength": 20
+        },
+        {
+            "position": 213,
+            "strand": "rev",
+            "sequence": "CCCCACGATGGAGGGGAAGA",
+            "targetSequence": "TCTTCCCCTCCATCGTGGGG",
+            "pam": "CGG",
+            "targetPam": "CCG",
+            "targetLength": 20
+        }
+    ]
+}
