@@ -1,51 +1,90 @@
 import re
 
-from itertools import product, permutations
+from itertools import product, permutations, groupby
 
 
-def inverted(d):
-    result = {}
-    for key, value in d.copy().items():
-        if len(value) == 1:
-            result[value] = key
-            continue
-        for permutation in permutations(value):
-            result[f'({"/".join(permutation)})'] = key
-    return result
 
-def replace_slash(seq):
-    inverted_ambiguous_dna_values = inverted(IUPACData.ambiguous_dna_values)
-    for key, value in inverted_ambiguous_dna_values.items():
-        seq = seq.replace(key, value)
-    return seq
+genomes = {
+    "genomes": {
+        "hg38":
+            {
+                "genome": "hg38",
+                "species": "human",
+                "chromosomes": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,X,Y,M",
+            },
+        "m39":
+            {
+                "genome": "m39",
+                "species": "mouse",
+                "chromosomes": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,18,19,X,Y,M",
+            },
+        "hg19":
+            {
+                "genome": "hg19",
+                "species": "human",
+                "chromosomes": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,18,19,X,Y,M",
+            },
+    }
+}
 
-
+config = [
+    {
+        "field": "organism",
+        "options": [
+            {
+                "name": "human",
+                "genomes": [
+                    {
+                        "name": "hg38",
+                        "chromosomes": [
+                            "1", "2", "3", "4", "5", "6", "7", "8", "9", "10","11", "12", "13",
+                            "14", "15", "16", "17", "18", "19", "20","21", "22", "X", "Y", "M"
+                        ]
+                    },
+                    {
+                        "name": "hg19",
+                        "chromosomes": [
+                            "1", "2", "3", "4", "5", "6", "7", "8", "9", "10","11", "12", "13",
+                            "14", "15", "16", "17", "18", "19", "20","21", "22", "X", "Y", "M"
+                        ]
+                    }
+                ],
+            },
+            {
+                "name": "mouse",
+                "genomes": [
+                    {
+                        "name": "m39",
+                        "chromosomes": [
+                            "1", "2", "3", "4", "5", "6", "7", "8", "9", "10","11", "12", "13",
+                            "14", "15", "16", "17", "18", "19", "X", "Y", "M"
+                        ]
+                    }
+                ],
+            },
+        ]
+    }
+]
 
 if __name__ == '__main__':
-    from Bio.Data import IUPACData
-
-    seq = "N(A/G)NG(A/G)T(G/A)"
-    seq = replace_slash(seq)
-    # seq = seq.replace("(A/G)", "R")
-    l = list(map("".join, product(*map(IUPACData.ambiguous_dna_values.get, seq))))
-    # awd = 23
-
-
-    a = {
-        "A": "A",
-        "C": "C",
-        "G": "G",
-        "T": "T",
-        "M": "AC"
+    genome_options = []
+    genome_list = sorted([v for k, v in genomes["genomes"].items()], key=lambda x: x["species"])
+    for species, genome_items in groupby(genome_list, key=lambda x: x["species"]):
+        genome_options.append(
+            {
+                "name": species,
+                "genomes": [
+                    {
+                        "name": genome["genome"],
+                        "chromosomes": genome["chromosomes"].split(",")
+                    } for genome in genome_items
+                ]
+            }
+        )
+    result = {
+        "field": "organism",
+        "options": genome_options
     }
-    b = {
-        "A": "A",
-        "C": "C",
-        "G": "G",
-        "T": "T",
-        "(A/C)": "M",
-        "(C/A)": "M",
-    }
-    g = inverted(IUPACData.ambiguous_dna_values)
-    awd =23
 
+
+    awd = 23

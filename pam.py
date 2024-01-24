@@ -1,6 +1,7 @@
 from Bio.Data import IUPACData
 from itertools import product, permutations
-
+from fastapi import Depends
+from starlette.config import Config
 
 def replace_slash(seq: str) -> str:
     """Replace slash notation with IUPAC ambiguous DNA code."""
