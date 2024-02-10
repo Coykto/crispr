@@ -1,90 +1,42 @@
-import re
+from functools import cached_property
 
-from itertools import product, permutations, groupby
+from openpyxl import load_workbook, Workbook
 
 
+class ReadExcel:
+    def __init__(self, file_path):
+        self.file_path = file_path
+        self.wb = load_workbook(self.file_path)
+        self.ws = self.wb.active
 
-genomes = {
-    "genomes": {
-        "hg38":
-            {
-                "genome": "hg38",
-                "species": "human",
-                "chromosomes": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,X,Y,M",
-            },
-        "m39":
-            {
-                "genome": "m39",
-                "species": "mouse",
-                "chromosomes": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,18,19,X,Y,M",
-            },
-        "hg19":
-            {
-                "genome": "hg19",
-                "species": "human",
-                "chromosomes": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,18,19,X,Y,M",
-            },
-    }
-}
+    @cached_property
+    def headers(self):
+        return [cell for cell in next(self.ws.iter_rows(values_only=True))]
 
-config = [
-    {
-        "field": "organism",
-        "options": [
-            {
-                "name": "human",
-                "genomes": [
-                    {
-                        "name": "hg38",
-                        "chromosomes": [
-                            "1", "2", "3", "4", "5", "6", "7", "8", "9", "10","11", "12", "13",
-                            "14", "15", "16", "17", "18", "19", "20","21", "22", "X", "Y", "M"
-                        ]
-                    },
-                    {
-                        "name": "hg19",
-                        "chromosomes": [
-                            "1", "2", "3", "4", "5", "6", "7", "8", "9", "10","11", "12", "13",
-                            "14", "15", "16", "17", "18", "19", "20","21", "22", "X", "Y", "M"
-                        ]
-                    }
-                ],
-            },
-            {
-                "name": "mouse",
-                "genomes": [
-                    {
-                        "name": "m39",
-                        "chromosomes": [
-                            "1", "2", "3", "4", "5", "6", "7", "8", "9", "10","11", "12", "13",
-                            "14", "15", "16", "17", "18", "19", "X", "Y", "M"
-                        ]
-                    }
-                ],
-            },
-        ]
-    }
-]
+    @cached_property
+    def data(self):
+        result = []
+        for row in self.ws.iter_rows(min_row=2, values_only=True):
+            row_data = {self.headers[i]: value for i, value in enumerate(row)}
+            result.append(row_data)
+        return result
+
+
+class WriteExcel:
+    def __init__(self, file_path):
+        self.file_path = file_path
+        self.wb = Workbook()
+        self.ws = self.wb.active
+
+    def write_rows(self, reader: ReadExcel):
+        self.ws.append(reader.headers)
+        for row_data in reader.data:
+            row = [row_data.get(header) for header in reader.headers]
+            self.ws.append(row)
+        self.wb.save(self.file_path)
+
 
 if __name__ == '__main__':
-    genome_options = []
-    genome_list = sorted([v for k, v in genomes["genomes"].items()], key=lambda x: x["species"])
-    for species, genome_items in groupby(genome_list, key=lambda x: x["species"]):
-        genome_options.append(
-            {
-                "name": species,
-                "genomes": [
-                    {
-                        "name": genome["genome"],
-                        "chromosomes": genome["chromosomes"].split(",")
-                    } for genome in genome_items
-                ]
-            }
-        )
-    result = {
-        "field": "organism",
-        "options": genome_options
-    }
-
-
-    awd = 23
+    reader = ReadExcel('input.xlsx')
+    writer = WriteExcel('output.xlsx')
+    writer.write_rows(reader)
